@@ -1,3 +1,4 @@
+import 'package:desafio_miscelanea_masterclass/presenter/ui/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/app_images.dart';
@@ -6,25 +7,28 @@ class MyCard extends StatelessWidget {
   final String titleCard;
   final String count;
   final String description;
+  final Image image;
 
   const MyCard({
     super.key,
     required this.titleCard,
     required this.count,
     required this.description,
+    required this.image,
   });
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final size = MediaQuery.of(context).size;
 
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Container(
-        height: 220,
+        height: size.height * 0.23,
         width: 400,
         decoration: BoxDecoration(
-          color: Colors.amber,
+          color: AppColors.highLightDark,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Padding(
@@ -36,18 +40,25 @@ class MyCard extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        height: 43,
-                        width: 43,
+                        height: size.height * 0.0465, //43,
+                        width: size.width * 0.0959,
                         decoration: BoxDecoration(
-                          color: Colors.red,
+                          color: AppColors.primaryColor,
                           borderRadius: BorderRadius.circular(100),
                         ),
-                        // child: Icon,
+                        child: SizedBox(
+                          height: size.height * 0.0558,
+                          width: size.width * 0.669,
+                          child: Padding(
+                            padding: const EdgeInsets.all(6.0),
+                            child: image,
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    width: 10,
+                  SizedBox(
+                    width: size.width * 0.0290,
                   ),
                   Column(
                     children: [
@@ -57,7 +68,7 @@ class MyCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     children: [
                       Text(
@@ -66,8 +77,8 @@ class MyCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    width: 10,
+                  SizedBox(
+                    width: size.width * 0.0223,
                   ),
                   Column(
                     children: [
@@ -80,33 +91,36 @@ class MyCard extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 37,
+              SizedBox(
+                height: size.height * 0.04,
               ),
               Row(
                 children: [
                   Text(description),
                 ],
               ),
-              const SizedBox(
-                height: 40,
+              SizedBox(
+                height: size.height * 0.04,
               ),
               Row(
                 children: [
                   Column(
                     children: [
-                      AppImages.gitHub,
+                      SizedBox(
+                        width: size.width * 0.0446,
+                        height: size.height * 0.0227,
+                        child: AppImages.gitHubLight,
+                      ),
                     ],
                   ),
-                  const SizedBox(
-                    width: 10,
-                  ),
+                  SizedBox(width: size.width * 0.0223),
                   Column(
                     children: [
                       Text(
                         'Acessar código fonte',
-                        style: theme.textTheme.bodyText2!
-                            .copyWith(fontWeight: FontWeight.w600),
+                        style: theme.textTheme.bodyText2!.copyWith(
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ],
                   ),
@@ -114,16 +128,18 @@ class MyCard extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        height: 50,
-                        width: 100,
+                        height: size.height * 0.0373,
+                        width: size.width * 0.26,
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: theme.primaryColor,
                           borderRadius: BorderRadius.circular(100),
                         ),
-                        child: const Center(
+                        child: Center(
                           child: Text(
                             'Ver mais',
-                            style: TextStyle(color: Colors.white),
+                            style: theme.textTheme.bodyText2!.copyWith(
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.cardLight),
                           ),
                         ),
                       ),

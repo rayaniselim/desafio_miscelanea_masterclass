@@ -2,8 +2,6 @@ import 'package:desafio_miscelanea_masterclass/presenter/ui/theme/app_colors.dar
 import 'package:desafio_miscelanea_masterclass/presenter/ui/theme/app_images.dart';
 import 'package:flutter/material.dart';
 
-import '../theme/app_theme.dart';
-
 class MyAppBar extends StatelessWidget {
   final String title;
 
@@ -26,22 +24,21 @@ class MyAppBar extends StatelessWidget {
 
       width: size.width,
       child: Padding(
-        padding: const EdgeInsets.only(
-          left: 21,
-          top: 58,
-          bottom: 24,
-          right: 21,
+        padding: EdgeInsets.only(
+          left: size.width * 0.0468,
+          top: size.height * 0.0227 + statusBar,
+          right: size.width * 0.0468,
         ),
         child: Row(
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
           children: [
             AppImages.logo,
-            const SizedBox(
-              width: 4,
+            SizedBox(
+              width: size.width * 0.008,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   title,
@@ -58,7 +55,7 @@ class MyAppBar extends StatelessWidget {
               onTap: () {
                 ThemeMode.system == isLight ? ThemeMode.light : ThemeMode.dark;
               },
-              child: AppImages.moonDark,
+              child: AppImages.moonLight,
             ),
           ],
         ),
