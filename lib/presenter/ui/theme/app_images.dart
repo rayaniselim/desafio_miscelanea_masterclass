@@ -20,10 +20,8 @@ class AppImages {
     // height: 21.45,
   );
 
-  static Image gitHub = Image.asset(
-    'assets/image/Icon awesome-github@2x.png',
-    // fit: BoxFit.cover,
-    // width: 24,
-    // height: 21.45,
-  );
+  static Image gitHub = Image.asset('assets/image/Icon awesome-github@2x.png',
+      // fit: BoxFit.cover,
+      width: 20,
+      height: 20.51);
 }

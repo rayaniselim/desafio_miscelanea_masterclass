@@ -1,3 +1,4 @@
+import 'package:desafio_miscelanea_masterclass/presenter/ui/widget/my_card.dart';
 import 'package:flutter/material.dart';
 
 import '../presenter/ui/widget/my_app_bar.dart';
@@ -12,9 +13,22 @@ class ActivitiesPage extends StatefulWidget {
 class _ActivitiesPageState extends State<ActivitiesPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: MyAppBar(
-        title: 'Atividades',
+    return Scaffold(
+      body: Column(
+        children: [
+          const MyAppBar(
+            title: 'Atividades',
+          ),
+          Column(
+            children: const [
+              MyCard(
+                titleCard: 'Animações',
+                count: '4',
+                description: 'Description',
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
