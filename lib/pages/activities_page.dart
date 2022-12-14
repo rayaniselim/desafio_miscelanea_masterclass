@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../presenter/ui/theme/app_colors.dart';
 import '../presenter/ui/widget/my_app_bar.dart';
+import '../presenter/ui/widget/my_bottom_bar.dart';
 
 class ActivitiesPage extends StatefulWidget {
   const ActivitiesPage({super.key});
@@ -17,6 +18,7 @@ class _ActivitiesPageState extends State<ActivitiesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundLight,
+      // TODO: CHAMAR PELO TEMA
       body: Column(
         children: [
           const MyAppBar(
@@ -32,6 +34,8 @@ class _ActivitiesPageState extends State<ActivitiesPage> {
               ),
             ],
           ),
+          const Spacer(),
+          const MyBottomBar()
         ],
       ),
     );

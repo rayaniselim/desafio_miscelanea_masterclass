@@ -15,6 +15,12 @@ class AppImages {
     fit: BoxFit.contain,
   );
 
+  static Image target2xLight = Image.asset(
+    'assets/image/light/target.png',
+    alignment: Alignment.center,
+    fit: BoxFit.contain,
+  );
+
   //// LIGHT
 
   static Image runningWhite = Image.asset(
@@ -37,8 +43,6 @@ class AppImages {
     'assets/image/light/github.png',
     alignment: Alignment.center,
     fit: BoxFit.contain,
-    width: 20,
-    height: 20.51,
   );
 
   //// DARK
