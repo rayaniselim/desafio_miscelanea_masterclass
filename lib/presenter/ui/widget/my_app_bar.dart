@@ -1,4 +1,3 @@
-import 'package:desafio_miscelanea_masterclass/presenter/ui/theme/app_colors.dart';
 import 'package:desafio_miscelanea_masterclass/presenter/ui/theme/app_images.dart';
 import 'package:flutter/material.dart';
 
@@ -17,11 +16,8 @@ class MyAppBar extends StatelessWidget {
     final theme = Theme.of(context);
     bool isLight = true;
 
-    return Container(
-      color: AppColors.backgroundLight,
-      // instanciar color com o theme
-      height: 80 + statusBar,
-
+    return SizedBox(
+      height: 80 + statusBar, // 59
       width: size.width,
       child: Padding(
         padding: EdgeInsets.only(

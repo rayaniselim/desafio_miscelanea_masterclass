@@ -17,8 +17,6 @@ class _ActivitiesPageState extends State<ActivitiesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundLight,
-      // TODO: CHAMAR PELO TEMA
       body: Column(
         children: [
           const MyAppBar(

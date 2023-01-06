@@ -15,7 +15,7 @@ class MyBottomBar extends StatelessWidget {
       backgroundColor: theme.backgroundColor,
       elevation: 0,
       selectedItemColor: AppColors.highLightLight,
-      selectedLabelStyle: AppFont.bodyText2!.copyWith(fontSize: 11),
+      selectedLabelStyle: AppFont.bodyText2.copyWith(fontSize: 11),
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: AppImages.target2xLight,

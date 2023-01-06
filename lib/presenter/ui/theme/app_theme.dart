@@ -9,6 +9,7 @@ class AppTheme {
     highlightColor: AppColors.highLightLight,
     cardColor: AppColors.cardLight,
     backgroundColor: AppColors.backgroundLight,
+    scaffoldBackgroundColor: AppColors.backgroundLight,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     errorColor: AppColors.colorsError,
     iconTheme: const IconThemeData(
@@ -41,6 +42,7 @@ class AppTheme {
     highlightColor: AppColors.highLightDark,
     cardColor: AppColors.cardDark,
     backgroundColor: AppColors.backgroundDark,
+    scaffoldBackgroundColor: AppColors.backgroundDark,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     errorColor: AppColors.colorsError,
     iconTheme: const IconThemeData(

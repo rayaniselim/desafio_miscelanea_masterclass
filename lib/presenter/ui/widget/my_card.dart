@@ -1,6 +1,7 @@
 import 'package:desafio_miscelanea_masterclass/presenter/ui/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../../../pages/list_animated.dart';
 import '../theme/app_images.dart';
 
 class MyCard extends StatelessWidget {
@@ -135,11 +136,18 @@ class MyCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(100),
                         ),
                         child: Center(
-                          child: Text(
-                            'Ver mais',
-                            style: theme.textTheme.bodyText2!.copyWith(
-                                fontWeight: FontWeight.w600,
-                                color: AppColors.cardLight),
+                          child: GestureDetector(
+                            child: Text(
+                              'Ver mais',
+                              style: theme.textTheme.bodyText2!.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColors.cardLight),
+                            ),
+                            onTap: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const ListAnimated(),
+                              ),
+                            ),
                           ),
                         ),
                       ),
